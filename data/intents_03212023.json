@@ -1,0 +1,185 @@
+{
+    "intents": [
+      {
+        "tag": "golfIntroduce",
+        "patterns": [
+          "Tell me a little bit about Saigon Entrepreneur Golf Club",
+          "tell me some information about Saigon Entrepreneur Golf Club",
+          "introduce Saigon Entrepreneur Golf Club",
+          "more about Saigon Entrepreneur Golf Club",
+          "Let's introduce a little about Saigon Entrepreneur Golf Club",
+          "tell me about Saigon Entrepreneur Golf Club"
+        ],
+        "responses": [
+          "Câu lạc bộ Golf Doanh Nhân Sài Gòn là tổ chức quần chúng; bao gồm các hội viên thuộc Câu lạc bộ Doanh nhân Sài Gòn và tổ chức, cá nhân yêu thích môn thể thao golf, có hoạt động về golf và chơi golf trên cơ sở tự nguyện để rèn luyện sức khỏe, tham gia phát triển phong trào, nâng cao trình độ môn golf và tăng cường giao lưu, đoàn kết hữu nghị với các đối tác trong và ngoài nước với tôn chỉ:  Kết nối và Đẳng cấp.",
+          "basic_V01/golfIntroduce"
+        ]
+      },
+      {
+        "tag": "golfAddress",
+        "patterns": [
+          "Where is the club based?",
+          "Tell me the address of the club."
+        ],
+        "responses": [
+          "Trụ sở câu lạc bộ đặt tại: 250 Nguyễn Thị Minh Khai, Phường 6, Quận 3, Thành phố Hồ Chí Minh.",
+          "basic_V01/golfAddress"
+        ]
+      },
+      {
+        "tag": "golfLaw",
+        "patterns": [
+          "Is the club protected by law?",
+          "Is the club legal?"
+        ],
+        "responses": [
+          "Câu lạc bộ Golf Doanh nhân Sài Gòn trực thuộc câu lạc bộ Doanh nhân Sài Gòn hoạt động theo pháp luật Việt Nam và chịu sự quản lý thông qua nghị quyết của Ban chấp hành câu lạc bộ Doanh nhân Sài Gòn, Chủ tịch hoặc Phó chủ tịch được ủy quyền của câu lạc bộ Doanh nhân Sài Gòn phê duyệt điều lệ hoạt động của câu lạc bộ Golf Doanh nhân Sài Gòn. câu lạc bộ Golf Doanh nhân Sài Gòn hoạt động với tư cách pháp nhân của câu lạc bộ Doanh nhân Sài Gòn trong phạm vi cho phép , có biểu tượng, con dấu và tài khoản riêng.",
+          "basic_V01/golfLaw"
+        ]
+      },
+      {
+        "tag": "golfPrinciples",
+        "patterns": [
+          "A brief overview of the club's operating principles.",
+          "What is the operating principle of the club?"
+        ],
+        "responses": [
+          "Câu lạc bộ Golf Doanh nhân Sài Gòn tổ chức và hoạt động theo nguyên tắc tự nguyện, dân chủ, bình đẳng, quyết định theo đa số, tự quản, tự trang trải về kinh phí theo Điều lệ, theo các quy định của câu lạc bộ Doanh nhân Sài Gòn trong khuôn khổ của Pháp luật. Câu lạc bộ Golf Doanh nhân Sài Gòn chỉ được đề xuất thành lập và duy trì khi có ít nhất trên 15 Hội viên chính thức của câu lạc bộ Doanh nhân Sài Gòn tham gia.",
+          "basic_V01/golfPrinciples"
+        ]
+      },
+      {
+        "tag": "golfScope",
+        "patterns": [
+          "Scope of activities of the club.",
+          "Scope and field of activities of the club."
+        ],
+        "responses": [
+          "Câu lạc bộ tổ chức hoạt động trên phạm vi Thành phố Hồ Chí Minh và các tỉnh thành có liên kết, hợp tác về Golf với câu lạc bộ Doanh nhân Sài Gòn, đoàn kết tập hợp các Doanh nhân tạo điều kiện giao lưu, hỗ trợ cho sự phát triển vững mạnh của Doanh nhân Hội viên câu lạc bộ Doanh nhân Sài Gòn và các đối tác. Câu lạc bộ Golf Doanh nhân Sài Gòn là thành viên và chịu sự quản lý của trực tiếp của câu lạc bộ Doanh nhân Sài Gòn.",
+          "basic_V01/golfScope"
+        ]
+      },
+      {
+        "tag": "golfconditions",
+        "patterns": [
+          "What are the conditions to become a member of the club?",
+          "What conditions must be met to become a member of the club?"
+        ],
+        "responses": [
+          "Hội viên của câu lạc bộ Doanh nhân Sài Gòn biết chơi golf, nếu tán thành Điều lệ của câu lạc bộ Golf Doanh Nhân Sài Gòn và có đơn xin tự nguyện gia nhập đều có thể trở thành hội viên của câu lạc bộ mà không cần phải đóng hội phí của câu lạc bộ Golf Doanh Nhân Sài Gòn. Những cá nhân có phẩm chất đạo đức tốt, biết chơi golf nếu tán thành Điều lệ của câu lạc bộ Golf Doanh Nhân Sài Gòn và có đơn xin tự nguyện gia nhập đều có thể trở thành hội viên của câu lạc bộ. Những nhà đầu tư, doanh nghiệp hoạt động liên quan đến môn thể thao golf nếu tán thành Điều lệ này và có đơn xin tự nguyện gia nhập thì có thể được kết nạp thành hội viên câu lạc bộ. Những cá nhân, tổ chức có nhiều đóng góp to lớn cho hoạt động của câu lạc bộ và có đơn xin tự nguyện gia nhập gia sẽ được kết nạp thành hội viên câu lạc bộ. Khuyến khích các cá nhân tổ chức tham gia trở thành hội viên và đóng góp cho các hoạt động của câu lạc bộ.",
+          "basic_V01/golfconditions"
+        ]
+      },
+      {
+        "tag": "golfBenefits",
+        "patterns": [
+          "What benefits will I enjoy when joining the club?",
+          "What benefits do club members have?"
+        ],
+        "responses": [
+          "Quyền lợi của Hội viên: Được xem là Hội viên của câu lạc bộ kể từ thời điểm được cấp thẻ hội viên, Hội viên được cấp thẻ Hội viên được hưởng ứng các quyền lợi sau: Được quyền tham gia thảo luận, góp ý xây dựng kế hoạch, phương hướng, biện pháp, giải pháp, chương trình hoạt động của câu lạc bộ Golf Doanh Nhân Sài Gòn. Giám sát hoạt động của Ban lãnh đạo và các bộ phận chức năng của câu lạc bộ. Được quyền bầu cử, ứng cử vào Ban chấp hành câu lạc bộ. Được tham gia vào các hoạt động về Golf do câu lạc bộ tổ chức như: luyện tập, tập huấn, thi đấu ở các giải trong và ngoài nước, hội thảo và các hoạt động giải trí khác,v.v… Được ưu tiên sử dụng các cơ sở vật chất, kỹ thuật, phương tiện và trang thiết bị luyện tập chuyên dùng của câu lạc bộ. Được hưởng ưu đãi đối với nhiều dịch vụ khác nhau do câu lạc bộ xác lập với các tổ chức kinh tế - xã hội, các câu lạc bộ khác. Được hỗ trợ và tạo điều kiện để luyện tập, nâng cao trình độ và kiến thức chuyên môn về golf. Được câu lạc bộ bảo vệ danh dự và uy tín chính đáng trước công luận. Được khen thưởng khi có thành tích. Các Hội viên tập thể được cử thành viên tham gia các hoạt động của câu lạc bộ. Số lượng thành viên đại diện sẽ được Ban chấp hành câu lạc bộ thông báo tùy theo từng sự kiện. Nhưng theo đó, hội viên cũng cần một số nghĩa vụ và trách nhiệm nhất định.",
+          "basic_V01/golfBenefits"
+        ]
+      },
+      {
+        "tag": "golfResponsibility",
+        "patterns": [
+          "So what are the obligations I need to fulfill?",
+          "So what is my responsibility?"
+        ],
+        "responses": [
+          "Nghĩa vụ và trách nhiệm của Hội viên là: Nghiêm chỉnh chấp hành Điều lệ, các quy định, nội quy và Nghị quyết của câu lạc bộ Golf Doanh Nhân Sài Gòn. Đóng hội phí đầy đủ và đúng hạn theo quy định. Tham gia tích cực và thường xuyên sinh hoạt và hoạt động của câu lạc bộ. Tuyên truyền, quảng bá sâu rộng môn thể thao golf trong xã hội và kêu gọi tham gia câu lạc bộ để phát triển câu lạc bộ. Giữ gìn và bảo vệ sự đoàn kết và uy tín của câu lạc bộ. Tham gia đóng góp ý kiến đối với các vấn đề: kế hoạch, chương trình hoạt động và các biện pháp tổ chức thực hiện, các vấn đề về nhân sự của câu lạc bộ để xây dựng câu lạc bộ ngày càng phát triển và vững mạnh.",
+          "basic_V01/golfResponsibility"
+        ]
+      },
+      {
+        "tag": "golfAdmitted",
+        "patterns": [
+          "How to be admitted to the club?",
+          "What do I need to do to be admitted to the club?"
+        ],
+        "responses": [
+          "Những cá nhân, doanh nghiệp, tổ chức hoặc người đóng góp to lớn cho hoạt động của câu lạc bộ quy định tại Điều 7 nếu muốn tham gia câu lạc bộ Golf Doanh Nhân Sài Gòn phải làm đơn xin gia nhập và phải hoàn tất nghĩa vụ đóng phí gia nhập đồng thời được sự giới thiệu và đảm bảo của ít nhất 01 hội viên chính thức của câu lạc bộ Golf Doanh nhân Sài Gòn. Việc quyết định kết nạp hội viên mới phải được sự nhất trí trên nguyên tắc quá bán của Ban Chủ nhiệm câu lạc bộ Golf Doanh Nhân Sài Gòn.",
+          "basic_V01/golfAdmitted"
+        ]
+      },
+      {
+        "tag": "golfExpelled",
+        "patterns": [
+          "Who will be expelled from the club?",
+          "What are the likely causes of disqualification from the club?"
+        ],
+        "responses": [
+          "Hội viên sẽ bị khai trừ khỏi câu lạc bộ Golf Doanh Nhân Sài Gòn khi vi phạm những quy định sau: Không nộp các khoản Hội phí theo quy định; Bị kỷ luật ở hình thức cảnh cáo quá 03 lần do vi phạm nội quy và điều lệ của câu lạc bộ; Thành viên câu lạc bộ Golf Doanh nhân Sài Gòn là người đang bị khởi tố hình sự.",
+          "basic_V01/golfExpelled"
+        ]
+      },
+      {
+        "tag": "golfPresident",
+        "patterns": [
+          "Who is the club president?",
+          "Who is the current head of the club?"
+        ],
+        "responses": [
+          "Chủ tịch của câu lạc bộ là ông Nguyễn Hữu Phúc",
+          "basic_V01/golfPresident"
+        ]
+      },
+      {
+        "tag": "golfFinancial",
+        "patterns": [
+          "The financial situation of the club.",
+          "What revenue and expenditure does the club have?"
+        ],
+        "responses": [
+          "Câu lạc bộ Golf Doanh Nhân Sài Gòn có nguồn tài chính và tài sản được quản lý, thu chi cho các hoạt động theo các quy định về tài chính của câu lạc bộ phù hợp luật pháp và các quy định hiện hành của Nhà nước và được công khai trong các kỳ họp của Ban chấp hành và tại Đại hội Ban chấp hành Nguồn thu tài chính của câu lạc bộ Golf Doanh Nhân Sài Gòn gồm: 1. Hội phí: Mức hội phí do Ban Chấp hành quy định và ban hành thành văn bản. Hội viên đóng hội phí  theo quy định. 2. Đóng góp tự nguyện của các Hội viên. 3. Tiền thu từ các hoạt động tạo nguồn kinh phí dưới các hình thức như: Tổ chức giải, bán bản quyền, phát hành sách báo, tiếp thị, quảng cáo, tham gia cổ phần, làm dịch vụ theo quy định của Nhà nước. 4. Tiền thu từ các nguồn tài trợ, hỗ trợ khác. 5. Các khoản thu khác. Các khoản chi: 1. Mua sắm tài sản, phương tiện trang thiết bị cần thiết. 2. Xây dựng, sửa chữa, bảo trì cơ sở vật chất kỹ thuật. 3. Chi phí thuê trụ sở, chi phí hoạt động của văn phòng. 4. Chi phí tổ chức giải, thi đấu, tập huấn, hội nghị, hội thảo, đào tạo, hỗ trợ,v.v… 5. Chi phí khác khi được chủ tịch câu lạc bộ và Ban chấp hành đồng ý.",
+          "basic_V01/golfFinancial"
+        ]
+      },
+      {
+        "tag": "golfActivity",
+        "patterns": [
+          "Does the club have any new activities?",
+          "Will the club have any competition in the near future?",
+          "What is the club's upcoming activity?"
+        ],
+        "responses": [
+          "Sắp tới, Ngày 22 tháng 3, câu lạc bộ sẽ tổ chức Giải Giải Outing T3 - GOLF TÌNH YÊU VÀ NỖI NHỚ do CLB Golf Doanh Nhân Sài Gòn tổ chức với mong muốn kết nối các golfer, hội viên & doanh nhân đam mê golf. Sau đó, hội sẽ tổ chức lễ kết nạp cho những hội viên mới gồm có: ông Đồng Huy Nam, ông Huỳnh Tuấn Anh, ông Trần Tuấn Danh, ông Trần Trọng Khanh, ông Trịnh Xuân Chung, ông Võ Huy Phúc, ông Nguyễn Công Danh. Sự kiện hứa hẹn sẽ có nhiều phần thưởng hấp dẫn, mong hội viên sắp xếp tham gia.",
+          "basic_V01/golfActivity"
+        ]
+      },
+      {
+        "tag": "golfExecutive",
+        "patterns": [
+          "Who on the executive committee attended today's event?",
+          "Anyone going to the club's executive committee today?"
+        ],
+        "responses": [
+          "Sự kiện hân hạnh có sự góp mặt của các thành viên ban chấp hành câu lạc bộ: Ông Nguyễn Hữu Phúc - Chủ tịch câu lạc bộ. Ông Lê Sỹ Nhật – Phó chủ tịch phụ trách đội tuyển thi đấu. Ông Đào Ngọc Hoàng Giang - Phó chủ tịch thường trực và ông Nguyễn Quốc Cường - Phó chủ tịch phụ trách Hội Viên.",
+          "basic_V01/golfExecutive"
+        ]
+      },
+      {
+        "tag": "golfRobotics",
+        "patterns": [
+          "Let's introduce the company CBD Robotics.",
+          "Tell me about the company CBD Robotics."
+        ],
+        "responses": [
+          "CBD Robotics được thành lập bởi một nhóm chuyên gia người Mỹ gốc Việt và người Mỹ. Công ty chuyên nghiên cứu và phát triển các sản phẩm và dịch vụ liên quan đến dữ liệu lớn và trí tuệ nhân tạo. Các sản phẩm của công ty thuộc nhiều lĩnh vực như: Robot kết toán, Xe bay, Dự đoán mức tiêu thụ của người tiêu dùng trong marketing, Dự đoán bệnh ung thư phổi",
+          "basic_V01/golfRobotics"
+        ]
+      },
+      {
+        "tag": "golfVoicebot",
+        "patterns": [
+          "Let's introduce yourself.",
+          "What is Voicebot?"
+        ],
+        "responses": [
+          "Voicebot là sản phẩm mới nhất của CBD Robotics, đóng vai trò như một thư ký ảo trong doanh nghiệp. Voicebot được phát triển nhằm trả lời tự động các thông tin về doanh nghiệp được triển khai, hỗ trợ các chiến dịch marketing một cách hiệu quả.",
+          "basic_V01/golfVoicebot"
+        ]
+      }
+    ]
+}
