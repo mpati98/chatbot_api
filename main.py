@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 from flask_restful import Resource, Api, reqparse
 
 app = Flask(__name__)
@@ -23,24 +23,26 @@ def home():
 
 class Chatbot(Resource):
 
-    def get(self):
+    def post(self):
         # Use parser and find the user's query
-        args = parser.parse_args()
-        sentence = args['q']
-        try:
-            print(sentence)
-        except:
-            res = [
-                    "Bạn có thể liên hệ Miss Phương Trinh là Thư ký CLB qua số 0388 372 691 để biết thêm về thông tin này",
-                    "default/golfActivitiesInfor04"
-                ]
-                # tts_fptAI(res)
-                # SpeakText(res)
-            res_text = res[0]
-            res_audio = res[1]
+        # args = parser.parse_args()
+        # sentence = args['q']
+        text_input = request.get_json().get("message")
+        # try:
+        #     print(text_input)
+        #     re
+        # except:
+        #     res = [
+        #             "Bạn có thể liên hệ Miss Phương Trinh là Thư ký CLB qua số 0388 372 691 để biết thêm về thông tin này",
+        #             # "default/golfActivitiesInfor04"
+        #         ]
+        #         # tts_fptAI(res)
+        #         # SpeakText(res)
+        #     res_text = res[0]
+        #     # res_audio = res[1]
         output = {
-            "res_text": res_text,
-            "res_audio": res_audio
+            "res_text": text_input,
+            # "res_audio": res_audio
         }
         return jsonify(output)
 
