@@ -29,8 +29,8 @@ def home():
 @app.route('/welcome', methods=["GET"])
 def voice_welcome():
     welcome = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
-    audio = tts_fptAI(welcome)
-    play_mp3("data/audio/" + audio)
+    # audio = tts_fptAI(welcome)
+    play_mp3("data/audio/default/introduce.mp3")
     return jsonify(welcome)
 
 
