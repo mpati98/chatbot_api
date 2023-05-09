@@ -36,7 +36,7 @@ def voice_welcome():
 
 class Chatbot(Resource):
 
-    def post(self):
+    def get(self):
         # Use parser and find the user's query
         # args = parser.parse_args()
         # sentence = args['q']
