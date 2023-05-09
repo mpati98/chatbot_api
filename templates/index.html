@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
   <head>
     <meta charset="UTF-8" />
     <title>Chatbot</title>
@@ -28,6 +28,7 @@
             <div></div>
           </div>
           <div class="chatbox__footer">
+            <button class="chatbox__send--footer voice__button"><i class="fa fa-microphone"></i></button>
             <input type="text" placeholder="Write a message..." />
             <button class="chatbox__send--footer send__button">Send</button>
           </div>
@@ -52,19 +53,21 @@
             openButton: document.querySelector(".chatbox__button"),
             chatBox: document.querySelector(".chatbox__support"),
             sendButton: document.querySelector(".send__button"),
+            voiceButton: document.querySelector('.voice__button'),
           };
 
           this.state = false;
           this.message = [];
         }
         display() {
-          const { openButton, chatBox, sendButton } = this.args;
+          const { openButton, chatBox, sendButton, voiceButton } = this.args;
 
           openButton.addEventListener("click", () => this.toggleState(chatBox));
 
           sendButton.addEventListener("click", () =>
             this.onSendButton(chatBox)
           );
+          voiceButton.addEventListener('click', () => this.onVoiceButton(chatBox))
 
           const node = chatBox.querySelector("input");
           node.addEventListener("keyup", ({ key }) => {
@@ -76,10 +79,31 @@
         toggleState(chatbox) {
           this.state = !this.state;
           if (this.state) {
-            chatbox.classList.add("chatbox--active");
-          } else {
-            chatbox.classList.remove("chatbox--active");
-          }
+            chatbox.classList.add('chatbox--active')
+            fetch("http://127.0.0.1:5000/welcome", {
+                method: 'POST',
+                body: JSON.stringify(),
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(r => r.json())
+            .then(r => {
+                let msg = {name: "Sam", message: r};
+                console.log(r)
+                // this.text2speak(msg.message)
+                console.log(msg.message);
+                this.message.push(msg);
+                this.updateChatText(chatbox)
+            }).catch((error) => {
+                console.log('Error: ', error);
+                this.updateChatText(chatbox)
+            });
+        }
+        else{
+            chatbox.classList.remove('chatbox--active');
+        }
         }
         onSendButton(chatbox) {
           var textField = chatbox.querySelector("input");
@@ -110,6 +134,66 @@
               textField.value = "";
             });
         }
+        onVoiceButton(chatbox){
+        var grammar = '#JSGF V1.0;'
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+        var recognition = new SpeechRecognition();
+        var speechRecognitionList = new SpeechGrammarList();
+        speechRecognitionList.addFromString(grammar, 1);
+        recognition.grammars = speechRecognitionList;
+        recognition.lang = 'vi-VN';
+        recognition.interimResults = false;
+        var content;
+        if (!this.recordS){
+            recognition.start();
+            console.log("starting")
+            recognition.onerror = function(event) {
+                // message.textContent = 'Error occurred in recognition: ' + event.error;
+                console.log(event.error)
+            }
+
+            recognition.onresult = function(event) {
+                var lastResult = event.results.length - 1;
+                content = event.results[lastResult][0].transcript;
+                var chatmessage = chatbox.querySelector('.chatbox__messages');
+                chatmessage.textField = content
+                // content = content.json()
+            }
+            recognition.onspeechend = function() {
+                recognition.stop();
+                
+            }
+            this.recordS = true;
+        }
+        else {
+            var chatmessage = chatbox.querySelector('.chatbox__messages');
+            content = chatmessage.textField;
+            console.log(content)
+            let msg1 = {name: "User", message: content}
+            this.message.push(msg1);
+            this.updateChatText(chatbox)
+            // 'http://127.0.0.1:5000/voice_predict
+            fetch("http://127.0.0.1:5000/response", {
+                method: 'POST',
+                body: JSON.stringify({message: content}),
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(r => r.json())
+            .then(r => {
+                let msg3 = {name: "Sam", message: r.res_text};
+                this.message.push(msg3);
+                this.updateChatText(chatbox)
+            }).catch((error) => {
+                // console.error('Error: ', error);
+                this.updateChatText(chatbox)
+            });
+            this.recordS = false;
+        }
+        };
         updateChatText(chatbox) {
           var html = "";
           this.message

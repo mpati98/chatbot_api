@@ -60,6 +60,14 @@ body {
     cursor: pointer;
 }
 
+.voice__button {
+    font-size: 1.8em;
+    margin-right: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
 /* HEADER */
 .chatbox__header {

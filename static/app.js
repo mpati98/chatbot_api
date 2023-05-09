@@ -25,10 +25,31 @@ class Chatbox {
     }
     toggleState(chatbox){
         this.state = !this.state;
-        if(this.state){
+        if (this.state) {
             chatbox.classList.add('chatbox--active')
-        } else {
-            chatbox.classList.remove('chatbox--active')
+            fetch("http://127.0.0.1:5000/welcome", {
+                method: 'POST',
+                body: JSON.stringify(),
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(r => r.json())
+            .then(r => {
+                let msg = {name: "Sam", message: r};
+
+                // this.text2speak(msg.message)
+                console.log(msg.message)
+                this.messages.push(msg);
+                this.updateChatText(chatbox)
+            }).catch((error) => {
+                console.log('Error: ', error);
+                this.updateChatText(chatbox)
+            });
+        }
+        else{
+            chatbox.classList.remove('chatbox--active');
         }
     }
     onSendButton(chatbox){

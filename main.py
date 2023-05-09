@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, render_template, request
 from flask_restful import Resource, Api, reqparse
-
+from utils import tts_fptAI, play_mp3
 app = Flask(__name__)
 api = Api(app)
 
@@ -13,13 +13,25 @@ output = {}
 #         "zoo:blender/blender_90M/model")
 #     return blender_agent
 
-# Argument parsing
-parser = reqparse.RequestParser()
-parser.add_argument('q', help="Type your question")
+url = 'https://api.fpt.ai/hmi/tts/v5'
+payload = ''
+headers = {
+    'api-key': 'OaGgkRmCMzOoZbnwgX70IDWo77t0g5SW',
+    'speed': '',
+    'voice': 'banmai'
+}
 
 @app.route("/")
 def home():
     return render_template("index.html")
+@app.route('/welcome', methods=["POST"])
+def voice_welcome():
+    welcome = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
+    # SpeakText(welcome)
+    audio = tts_fptAI(welcome)
+    play_mp3("data/audio/" + audio)
+    return jsonify(welcome)
+
 
 class Chatbot(Resource):
 
