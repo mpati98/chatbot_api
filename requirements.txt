@@ -9,3 +9,4 @@ pandas
 flask_sqlalchemy==2.5.1
 sqlalchemy==1.4.29
 Flask-SQLAlchemy
+requests
