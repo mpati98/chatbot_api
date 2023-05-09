@@ -80,7 +80,7 @@
           this.state = !this.state;
           if (this.state) {
             chatbox.classList.add('chatbox--active')
-            fetch("https://chatbot-api-leqdt7akva-as.a.run.app/welcome", {
+            fetch("http://chatbot-api-leqdt7akva-as.a.run.app/welcome", {
                 method: 'POST',
                 body: JSON.stringify(),
                 mode: 'cors',
@@ -113,7 +113,7 @@
           }
           let msg1 = { name: "User", message: text1 };
           this.message.push(msg1);
-          fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
+          fetch("http://chatbot-api-leqdt7akva-as.a.run.app/response", {
             method: "POST",
             body: JSON.stringify({ message: text1 }),
             mode: "cors",
@@ -174,7 +174,7 @@
             this.message.push(msg1);
             this.updateChatText(chatbox)
             // 'http://127.0.0.1:5000/voice_predict
-            fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
+            fetch("http://chatbot-api-leqdt7akva-as.a.run.app/response", {
                 method: 'POST',
                 body: JSON.stringify({message: content}),
                 mode: 'cors',
