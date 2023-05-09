@@ -26,7 +26,7 @@ headers = {
 def home():
     return render_template("index.html")
 
-@app.route('/welcome', methods=["POST"])
+@app.route('/welcome', methods=["GET"])
 def voice_welcome():
     welcome = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
     audio = tts_fptAI(welcome)

@@ -80,8 +80,8 @@
           this.state = !this.state;
           if (this.state) {
             chatbox.classList.add('chatbox--active')
-            // fetch("http://127.0.0.1:5000/welcome", {
-            fetch("https://chatbot-api-leqdt7akva-as.a.run.app/welcome", {
+            fetch("http://127.0.0.1:5000/welcome", {
+            // fetch("https://chatbot-api-leqdt7akva-as.a.run.app/welcome", {
                 method: 'POST',
                 body: JSON.stringify(),
                 mode: 'cors',
