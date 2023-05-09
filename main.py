@@ -1,10 +1,11 @@
 from flask import Flask, jsonify, render_template, request
-from flask_restful import Resource, Api, reqparse
+from flask_restful import Resource, Api
 from utils import tts_fptAI, play_mp3
+
+
 app = Flask(__name__)
 api = Api(app)
 
-output = {}
 
 # def Model_init():
 #     # import model from the model file can be pretrained or fine tuned
@@ -12,7 +13,7 @@ output = {}
 #     blender_agent = create_agent_from_model_file(
 #         "zoo:blender/blender_90M/model")
 #     return blender_agent
-
+# Load speech data from fpt server
 url = 'https://api.fpt.ai/hmi/tts/v5'
 payload = ''
 headers = {
@@ -24,10 +25,10 @@ headers = {
 @app.route("/")
 def home():
     return render_template("index.html")
+
 @app.route('/welcome', methods=["POST"])
 def voice_welcome():
     welcome = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
-    # SpeakText(welcome)
     audio = tts_fptAI(welcome)
     play_mp3("data/audio/" + audio)
     return jsonify(welcome)
