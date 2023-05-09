@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, render_template, request
 from flask_restful import Resource, Api
-from utils import tts_fptAI, play_mp3
+# from utils import tts_fptAI, play_mp3
 
 
 app = Flask(__name__)
@@ -30,8 +30,12 @@ def home():
 def voice_welcome():
     welcome = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
     # audio = tts_fptAI(welcome)
-    play_mp3("data/audio/default/introduce.mp3")
-    return jsonify(welcome)
+    # play_mp3("data/audio/default/introduce.mp3")
+    res = {
+        "msg": welcome,
+        "audio": "data/audio/default/introduce.mp3"
+    }
+    return jsonify(res)
 
 
 class Chatbot(Resource):
