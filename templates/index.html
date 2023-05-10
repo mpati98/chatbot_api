@@ -103,7 +103,7 @@
                 console.log(r.audio);
                 let msg = { name: "Sam", message: r.res_text };
                 let audio_tag = r.res_audio;
-                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10"+ audio_tag + ".mp3");
+                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10/"+ audio_tag + ".mp3");
                 audio.play();
                 this.message.push(msg);
                 this.updateChatText(chatbox);
@@ -137,7 +137,7 @@
             .then((r) => {
               let msg2 = { name: "Sam", message: r.res_text };
               let audio_tag = r.res_audio;
-              var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10"+ audio_tag + ".mp3");
+              var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10/"+ audio_tag + ".mp3");
               audio.play();
               this.message.push(msg2);
               this.updateChatText(chatbox);
@@ -199,7 +199,7 @@
               .then((r) => {
                 let msg3 = { name: "Sam", message: r.res_text };
                 let audio_tag = r.res_audio;
-                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10"+ audio_tag + ".mp3");
+                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10/"+ audio_tag + ".mp3");
                 audio.play();
                 this.message.push(msg3);
                 this.updateChatText(chatbox);
