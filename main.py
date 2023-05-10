@@ -55,7 +55,7 @@ def predict_class(sentence, model):
     # filter out predictions below a threshold
     p = bow(sentence, words,show_details=False)
     res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.25
+    ERROR_THRESHOLD = 0.95
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
     # sort by strength of probability
     results.sort(key=lambda x: x[1], reverse=True)
@@ -71,14 +71,16 @@ def getResponse(ints, intents_json):
         if(i['tag']== tag):
             result = i['responses']
             break
-        else:
-            result = "Rất xin lỗi vì thông tin bạn cần không tồn tại trong hệ thống, chúng tôi sẽ kiểm tra và cập nhật trong thời gian tới. Bạn còn muốn biết thêm thông tin gì khác không?"
-            tag = "Other"
     return result, tag
 
 def chatbot_response(msg):
     ints = predict_class(msg, model)
-    res, tag = getResponse(ints, intents)
+    print(ints)
+    if ints:
+        res, tag = getResponse(ints, intents)
+    else:
+        res = "Rất xin lỗi vì thông tin bạn cần không tồn tại trong hệ thống, chúng tôi sẽ kiểm tra và cập nhật trong thời gian tới. Bạn còn muốn biết thêm thông tin gì khác không?"
+        tag = "Other"
     return res, tag
 
 
