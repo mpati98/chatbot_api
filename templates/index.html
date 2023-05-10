@@ -123,8 +123,8 @@
           }
           let msg1 = { name: "User", message: text1 };
           this.message.push(msg1);
-          fetch('http://127.0.0.1:5000/voice_predict', {
-          // fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
+          // fetch('http://127.0.0.1:5000/response', {
+          fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
             method: "POST",
             body: JSON.stringify({ message: text1 }),
             mode: "cors",
@@ -182,8 +182,8 @@
             let msg1 = { name: "User", message: content };
             this.message.push(msg1);
             this.updateChatText(chatbox);
-            fetch('http://127.0.0.1:5000/response', {
-            // fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
+            // fetch('http://127.0.0.1:5000/response', {
+            fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
               method: "POST",
               body: JSON.stringify({ message: content }),
               mode: "cors",
