@@ -102,7 +102,7 @@
                 console.log(r.audio);
                 let msg = { name: "Sam", message: r.msg };
                 let audio_path = r.audio;
-                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/277eaa237cb56bd3c75ac44fec482263%20(1).mp3");
+                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/"+ audio_path);
                 audio.play();
                 this.message.push(msg);
                 this.updateChatText(chatbox);
@@ -123,7 +123,8 @@
           }
           let msg1 = { name: "User", message: text1 };
           this.message.push(msg1);
-          fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
+          fetch('http://127.0.0.1:5000/voice_predict', {
+          // fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
             method: "POST",
             body: JSON.stringify({ message: text1 }),
             mode: "cors",
@@ -181,8 +182,8 @@
             let msg1 = { name: "User", message: content };
             this.message.push(msg1);
             this.updateChatText(chatbox);
-            // 'http://127.0.0.1:5000/voice_predict
-            fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
+            fetch('http://127.0.0.1:5000/response', {
+            // fetch("https://chatbot-api-leqdt7akva-as.a.run.app/response", {
               method: "POST",
               body: JSON.stringify({ message: content }),
               mode: "cors",
