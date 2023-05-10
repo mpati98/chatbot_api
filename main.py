@@ -6,18 +6,17 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
-from keras.optimizers import SGD
+# from keras.models import Sequential
+# from keras.layers import Dense, Activation, Dropout
+# from keras.optimizers import SGD
 
 # Load data
 from keras.models import load_model
-model = load_model('model.h5')
+model = load_model('data/model/model_May10.h5')
 import json
-import random
-intents = json.loads(open('data/data.json').read())
-words = pickle.load(open('texts.pkl','rb'))
-classes = pickle.load(open('labels.pkl','rb'))
+intents = json.loads(open('data/intents/intents_May10.json').read())
+words = pickle.load(open('data/model/textsMay10.pkl','rb'))
+classes = pickle.load(open('data/model/labelsMay10.pkl','rb'))
 
 def transText(text_input, scr_input='user'):
     from googletrans import Translator
@@ -74,14 +73,16 @@ def getResponse(ints, intents_json):
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if(i['tag']== tag):
-            result = random.choice(i['responses'])
-            break
-    return result
+            result = i['responses']
+        else:
+            result = "Rất xin lỗi vì thông tin bạn cần không tồn tại trong hệ thống, chúng tôi sẽ kiểm tra và cập nhật trong thời gian tới. Bạn còn muốn biết thêm thông tin gì khác không?"
+            tag = "Other"
+    return result, tag
 
 def chatbot_response(msg):
     ints = predict_class(msg, model)
-    res = getResponse(ints, intents)
-    return res
+    res, tag = getResponse(ints, intents)
+    return res, tag
 
 
 app = Flask(__name__)
@@ -95,12 +96,12 @@ def home():
 
 @app.route('/welcome', methods=["POST"])
 def voice_welcome():
-    welcome = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
-    res = {
-        "msg": welcome,
-        "audio": "data/audio/default/introduce.mp3"
-    }
-    return jsonify(res)
+    resp = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
+    output = {
+            "res_text": resp,
+            "res_audio": "welcome"
+        }
+    return jsonify(output)
 
 
 class Chatbot(Resource):
@@ -109,10 +110,14 @@ class Chatbot(Resource):
 
         text_input = request.get_json().get("message")
         text_input = transText(text_input)
-        resp = chatbot_response(text_input)
+        try:
+            resp, tag = chatbot_response(text_input)
+        except:
+            resp = "Tín hiệu không ổn định, vui lòng lặp lại rõ hơn nhé"
+            tag = "Error"
         output = {
             "res_text": resp,
-            # "res_audio": res_audio
+            "res_audio": tag
         }
         return jsonify(output)
 

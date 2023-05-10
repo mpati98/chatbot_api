@@ -1,0 +1,106 @@
+{
+  "intents": [
+    {
+      "tag": "Introduce",
+      "patterns": [
+        "What activities does the Social Work Department do?",
+        "What is the purpose of the Social Work Committee?",
+        "What does the Social Work Department do?",
+        "What social work clubs?",
+        "Social activities organized by the club",
+        "What does the club's social activities include?"
+      ],
+      "responses": [
+        "Câu lạc bộ đã chức nhiều hoạt động thiện nguyện trên hầu khắp các lĩnh vực như hỗ trợ đồng bào miền Trung, tiếp sức cán bộ y tế chống dịch Covid, hỗ trợ việc làm, cấp học bổng cho học sinh nghèo vượt khó, … "
+      ]
+    },
+    {
+      "tag": "SW_activities",
+      "patterns": [
+        "Please list some typical activities",
+        "Please recommend some activities",
+        "What are the club's recent activities?"
+      ],
+      "responses": [
+        "Những hoạt động ý nghĩ mà hội đã thực hiện trong thời gian gần đây là: trao tặng 7 căn nhà tình thương tại xã Trà Tây, huyện Trà Bồng, tỉnh Quảng Ngãi, hỗ trợ thuốc cho F0 tại nhà, dự án Việc làm trao tay đánh bay COVID-19, ..."
+      ]
+    },
+    {
+      "tag": "SW_next_event",
+      "patterns": [
+        "What is the club going to do next?",
+        "What club's upcoming activity?"
+      ],
+      "responses": [
+        "Sắp tới hội sẽ tổ chức sự kiện Họp mặt đầu xuân nhằm tạo điều kiện để Quý anh chị doanh nhân có dịp Giao lưu - Kết nối - Thắt chặt tình đoàn kết với nhau, cũng như là dịp để Ban điều hành Ban Công tác xã hội chia sẻ kế hoạch và chương trình hành động của năm 2023"
+      ]
+    },
+    {
+      "tag": "SW_next_event_infor_01",
+      "patterns": [
+        "Where and when will the event be held?",
+        "When is the event held?",
+        "When does this event take place?"
+      ],
+      "responses": [
+        "Sự kiện sẽ diễn ra tại Nhà hàng PHỐ 79, Số 5 Phạm Ngọc Thạch, P. Võ Thị Sáu, Quận 3, TP. HCM lúc 17g00 ngày 24/02/2023"
+      ]
+    },
+    {
+      "tag": "SW_next_event_infor_02",
+      "patterns": [
+        "Anything to note?",
+        "What should I pay attention to when participating?",
+        "Is there a fee to join?",
+        "Does the activity have a fee?"
+      ],
+      "responses": [
+        "Bạn cần đóng phí chia sẻ với 600.000đ/người."
+      ]
+    },
+    {
+      "tag": "SW_next_event_infor_03",
+      "patterns": [
+        "How do I register to participate?",
+        "Who to contact to register?",
+        "Give me the information of who to contact to register to participate",
+        "How to join?"
+      ],
+      "responses": [
+        "Để đăng ký tham dự, bạn vui lòng liên hệ số điện thoại: 0913 733 557 gặp Anh Hồ - Phó Ban CTXH hoặc 0353712456 gặp Anh Cường - Thư ký Ban CTXH"
+      ]
+    },
+    {
+      "tag": "SW_next_event_infor_04",
+      "patterns": [
+        "Give me transfer information",
+        "What is the content of the transfer?",
+        "Where can I pay the fee?"
+      ],
+      "responses": [
+        "Thông tin tài khoản: 0371003698437 (Ngân hàng Vietcombank) Chủ tài khoản: Trịnh Thị Xuân Diệu, Nội dung: Tên + Phi chia se chuong trinh hop mat dau xuan"
+      ]
+    },
+    {
+      "tag": "Voicebot_Intro",
+      "patterns": [
+        "Let's introduce Voicebot.",
+        "What is Voicebot?",
+        "Let's introduce yourself"
+      ],
+      "responses": [
+        "Voicebot là sản phẩm mới nhất của CBD Robotics, đóng vai trò như một thư ký ảo trong doanh nghiệp. Voicebot được phát triển nhằm trả lời tự động các thông tin về doanh nghiệp được triển khai, hỗ trợ các chiến dịch marketing một cách hiệu quả."
+      ]
+    },
+    {
+      "tag": "CBD_Robot_Intro",
+      "patterns": [
+        "Let's introduce the company CBD Robotics",
+        "Tell me about the company CBD Robotics."
+      ],
+      "responses": [
+        "CBD Robotics được thành lập bởi một nhóm chuyên gia người Mỹ gốc Việt và người Mỹ. Công ty chuyên nghiên cứu và phát triển các sản phẩm và dịch vụ liên quan đến dữ liệu lớn và trí tuệ nhân tạo. Các sản phẩm của công ty thuộc nhiều lĩnh vực như: Robot kết toán, Xe bay, Dự đoán mức tiêu thụ của người tiêu dùng trong marketing, Dự đoán bệnh ung thư phổi"
+      ]
+    }
+  ]
+}
