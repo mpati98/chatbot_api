@@ -1,12 +1,10 @@
-from flask import Flask, jsonify, render_template, request
-from flask_restful import Resource, Api
 import nltk
 nltk.download('popular')
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
 import numpy as np
-# Load data
+
 from keras.models import load_model
 model = load_model('data/model/model_May10.h5')
 import json
@@ -55,7 +53,7 @@ def predict_class(sentence, model):
     # filter out predictions below a threshold
     p = bow(sentence, words,show_details=False)
     res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.25
+    ERROR_THRESHOLD = 0.2
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
     # sort by strength of probability
     results.sort(key=lambda x: x[1], reverse=True)
@@ -81,44 +79,18 @@ def chatbot_response(msg):
     res, tag = getResponse(ints, intents)
     return res, tag
 
-
-app = Flask(__name__)
-api = Api(app)
-
-
-
-@app.route("/")
-def home():
-    return render_template("index.html")
-
-@app.route('/welcome', methods=["POST"])
-def voice_welcome():
-    resp = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
-    output = {
-            "res_text": resp,
-            "res_audio": "welcome"
-        }
-    return jsonify(output)
-
-
-class Chatbot(Resource):
-
-    def post(self):
-
-        text_input = request.get_json().get("message")
-        text_input = transText(text_input)
-        try:
-            resp, tag = chatbot_response(text_input)
-        except:
-            resp = "Tín hiệu không ổn định, vui lòng lặp lại rõ hơn nhé"
-            tag = "Error"
-        output = {
-            "res_text": resp,
-            "res_audio": tag
-        }
-        return jsonify(output)
-
-api.add_resource(Chatbot, '/response')
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    while True:
+        text_input = input("User: ")
+        if text_input == "exit":
+            break
+        else:
+            text_input = transText(text_input)
+            print(text_input)
+            try:
+                resp, tag = chatbot_response(text_input)
+            except:
+                resp = "Tín hiệu không ổn định, vui lòng lặp lại rõ hơn nhé"
+                tag = "Error"
+            print("Bot: ", resp)
+            print("Tag: ", tag)
