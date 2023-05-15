@@ -7,25 +7,44 @@
     crossorigin="anonymous"
   />
   <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <head>
     <meta charset="UTF-8" />
     <title>Chatbot</title>
   </head>
   <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+      $(document).ready(function (){
+          $(".owl-carousel").owlCarousel({
+              items:1,
+              loop:true,
+              nav:true,
+              dots:true,
+              autoplay:true,
+              autoplaySpeed:500,
+              smartSpeed:1500,
+              autoplayHoverPause:true
+          })
+      });
+  </script>
     <div class="container">
       <div class="chatbox">
         <div class="chatbox__support">
           <div class="chatbox__header">
             <div class="chatbox__image--header">
               <img
-                src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
-                alt="image"
+              src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+              alt="image"
               />
             </div>
             <div class="chatbox__content--header">
               <h4 class="chatbox__heading--header">Chat support</h4>
               <p class="chatbox__description--header">
-                Hi. My name is Sam. How can I help you?
+                Xin chào! Tôi có thể giúp gì cho bạn?
               </p>
             </div>
           </div>
@@ -43,13 +62,33 @@
         <div class="chatbox__button">
           <button>
             <img
-              src="{{ url_for('static', filename='images/chatbox-icon.svg') }}"
+            src="{{ url_for('static', filename='images/chatbox-icon.svg') }}"
             />
           </button>
         </div>
       </div>
+      <div class="owl-carousel owl-theme">
+        <div class="slide slide-1">
+            <div class="slide-content">
+                <h1>Chương trình Caravan Mekong Connect & Grow</h1>
+                <p>Đây là chương trình ngoài những trải nghiệm với hành trình trải dài từ Việt Nam sang lĩnh thổ nước bạn Cambodia, đó còn là một chuyến đi mang lại cho chúng ta nhiều cảm xúc, bởi Cambodia là một quốc gia huyền bí, miền đất thiêng mang lại cho chúng ta rất nhiều sự thiện lành, cảm xúc tích cực khi đến và khi trở về. Cambodia gợi cho chúng ta về những câu chuyện với những giai thoại cổ đại, bên cạnh đó là cảm giác của sự mộc mạc, chân phương và thiên nhiên an bình.</p>
+            </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="slide-content">
+                <h1>Họp mặt đầu xuân</h1>
+                <p>Mọi người gặp gỡ nhau, cụng-ly với nhau và trao cho nhau những năng lượng tích cực. Bên cạnh đó, phía Ban điều hành cũng không quên chia sẻ những kế hoạch và chương trình hành động về công tác xã hội - thiện nguyện trong năm, qua đó lắng nghe những ý kiến, nguyện vọng và sự đồng hành của các thành viên.</p>
+            </div>
+        </div>
+        <div class="slide slide-3">
+            <div class="slide-content">
+                <h1>Lễ trao quà</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, libero minus. Cumque nobis deserunt ducimus. Dolorem dicta necessitatibus beatae harum sunt cum optio reiciendis veritatis eveniet soluta. Doloribus, natus accusamus?</p>
+            </div>
+        </div>
     </div>
-
+    </div>
+    
     <!-- <script>
         $SCRIPT_ROOT = {{ request.script_root|tojson }};
     </script> -->
