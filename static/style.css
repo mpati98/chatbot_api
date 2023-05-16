@@ -45,7 +45,7 @@ body {
     transform: translateY(-40px);
     z-index: 123456;
     opacity: 1;
-
+    margin-bottom: 30px;
 }
 
 /* BUTTON */
@@ -107,10 +107,10 @@ body {
 }
 
 .chatbox__support {
-    background: #f9f9f9;
+    background: transparent;
     height: 450px;
     width: 350px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -244,9 +244,8 @@ body {
 }
 
 .slide-content{
-    /* padding: 100px 200px !important;  */
-    width: 100px     !important;
-    height: 100vh;
+    padding: 10px 20px !important;
+    width: 70%;
     text-align: center;
     position: relative;
     transform: translateY(-50%);
