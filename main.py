@@ -8,11 +8,11 @@ import pickle
 import numpy as np
 # Load data
 from keras.models import load_model
-model = load_model('data/model/model_May10.h5')
+model = load_model('data/model/model_May22.h5')
 import json
-intents = json.loads(open('data/intents/intents_May10.json').read())
-words = pickle.load(open('data/model/textsMay10.pkl','rb'))
-classes = pickle.load(open('data/model/labelsMay10.pkl','rb'))
+intents = json.loads(open('data/intents/intents_May_22_2023.json').read())
+words = pickle.load(open('data/model/textsMay22.pkl','rb'))
+classes = pickle.load(open('data/model/labelsMay22.pkl','rb'))
 
 def transText(text_input, scr_input='user'):
     from googletrans import Translator
