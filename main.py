@@ -95,7 +95,7 @@ def home():
 
 @app.route('/welcome', methods=["POST"])
 def voice_welcome():
-    resp = "Xin chào, tôi là trợ lý ảo Ban công tác xã hội của câu lạc bộ Doanh nhân Sài Gòn, tôi có thẻ giúp gì cho bạn?"
+    resp = "Xin chào, sắp tới hội Doanh nhân Sài Gòn sẽ tổ chức chương trình Caravan Hành khúc Doanh nhân Sài Gòn 2023, bạn có muốn biết thêm thông tin không?"
     output = {
             "res_text": resp,
             "res_audio": "welcome"
