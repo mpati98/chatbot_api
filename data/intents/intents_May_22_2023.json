@@ -242,6 +242,27 @@
         "responses": [
           "Lĩnh vực giáo dục có những hoạt động như: Phát hiện các nguy cơ trong và ngoài cơ sở giáo dục có ảnh hưởng tiêu cực đến người học; phát hiện các vụ việc liên quan đến người học có hoàn cảnh đặc biệt, bị xâm hại, có hành vi bạo lực, bỏ học, vi phạm pháp luật; Tổ chức các hoạt động phòng ngừa, hạn chế nguy cơ người học rơi vào hoàn cảnh đặc biệt, bị xâm hại, bị bạo lực, bỏ học, vi phạm pháp luật; Thực hiện quy trình can thiệp, trợ giúp đối với người học có hoàn cảnh đặc biệt, bị xâm hại, bị bạo lực, bỏ học, vi phạm pháp luật;  Phối hợp với gia đình, chính quyền địa phương và các đơn vị cung cấp dịch vụ công tác xã hội tại cộng đồng, trợ giúp đối với người học cần can thiệp, trợ giúp khẩn cấp đối với giáo viên, người học có nhu cầu can thiệp và hỗ trợ; Tổ chức các hoạt động hỗ trợ phát triển, hòa nhập cộng đồng cho người học sau can thiệp và các trường hợp khác liên quan đến người học, giáo viên, phụ huynh khi có nhu cầu hỗ trợ."
         ]
+      },
+      {
+        "tag": "caravan2023",
+        "patterns": [
+          "ok, give me more info",
+          "Tell me more about the Saigon Entrepreneurs March 2023",
+          "For more information on the upcoming Caravan show"
+        ],
+        "responses": [
+          "Hành khúc Doanh nhân Sài Gòn 2023 sẽ trải nghiệm vào sáng 21.7.2023 để đến xã Cam Thịnh Tây trao 4 căn nhà cho bà con và men theo cung đường biển Ninh Chữ ( có sân golf Nara Bình Tiên nice view và Resort Amanoi 6 sao, đẳng cấp quốc tế)  về Ninh Hải trao 2 phòng máy đa phương tiện cho 2 trường học. Bạn có muốn tham gia không?"
+        ]
+      },
+      {
+        "tag": "caravanJoin",
+        "patterns": [
+          "Okay, how to join?",
+          "How to join the Saigon Entrepreneurs March 2023"
+        ],
+        "responses": [
+          "Để đăng ký tham dự, bạn vui lòng liên hệ số điện thoại: 0913 733 557 gặp Anh Hồ - Phó Ban CTXH hoặc 0353712456 gặp Anh Cường - Thư ký Ban CTXH."
+        ]
       }
     ]
   }
