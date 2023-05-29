@@ -132,7 +132,7 @@
               fetch("https://chatbot-api-leqdt7akva-as.a.run.app/welcome", {
               method: "POST",
               body: JSON.stringify(),
-              mode: "no-cors",
+              mode: "cors",
               headers: {
                 "Content-Type": "application/json",
               },
@@ -142,7 +142,7 @@
                 console.log(r.audio);
                 let msg = { name: "Sam", message: r.res_text };
                 let audio_tag = r.res_audio;
-                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10/"+ audio_tag + ".mp3");
+                var audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=a7800f18-d72b-4b7f-8b49-eaf357bea2f8");
                 audio.play();
                 this.message.push(msg);
                 this.updateChatText(chatbox);
