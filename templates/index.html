@@ -142,7 +142,7 @@
                 console.log(r.audio);
                 let msg = { name: "Sam", message: r.res_text };
                 let audio_tag = r.res_audio;
-                var audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=a7800f18-d72b-4b7f-8b49-eaf357bea2f8");
+                var audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/welcome.mp3?alt=media&token=fa4ad8a6-4c9b-47a5-8c0f-d096921fd76b");
                 audio.play();
                 this.message.push(msg);
                 this.updateChatText(chatbox);
