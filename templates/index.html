@@ -190,7 +190,7 @@
         }
         onVoiceButton(chatbox) {
           var grammar = "#JSGF V1.0;";
-          var SpeechRecognition = SpeechRecognition;// || webkitSpeechRecognition;
+          var SpeechRecognition = webkitSpeechRecognition; //SpeechRecognition || 
           var SpeechGrammarList = SpeechGrammarList;// || webkitSpeechGrammarList;
           var recognition = new SpeechRecognition();
           var speechRecognitionList = new SpeechGrammarList();
