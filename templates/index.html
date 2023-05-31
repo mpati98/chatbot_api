@@ -191,11 +191,11 @@
         onVoiceButton(chatbox) {
           var grammar = "#JSGF V1.0;";
           var SpeechRecognition = webkitSpeechRecognition; //SpeechRecognition || 
-          var SpeechGrammarList = SpeechGrammarList;// || webkitSpeechGrammarList;
+          // var SpeechGrammarList = SpeechGrammarList;// || webkitSpeechGrammarList;
           var recognition = new SpeechRecognition();
-          var speechRecognitionList = new SpeechGrammarList();
-          speechRecognitionList.addFromString(grammar, 1);
-          recognition.grammars = speechRecognitionList;
+          // var speechRecognitionList = new SpeechGrammarList();
+          // speechRecognitionList.addFromString(grammar, 1);
+          // recognition.grammars = speechRecognitionList;
           recognition.lang = "vi-VN";
           recognition.interimResults = false;
           var content;
