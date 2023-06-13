@@ -8,11 +8,11 @@ import pickle
 import numpy as np
 # Load data
 from keras.models import load_model
-model = load_model('data/model/model_May22.h5')
 import json
+model = load_model('data/model/model_Jun12.h5')
 intents = json.loads(open('data/intents/intents_May_22_2023.json').read())
-words = pickle.load(open('data/model/textsMay22.pkl','rb'))
-classes = pickle.load(open('data/model/labelsMay22.pkl','rb'))
+words = pickle.load(open('data/model/textsJun12.pkl','rb'))
+classes = pickle.load(open('data/model/labelsJun12.pkl','rb'))
 
 def transText(text_input, scr_input='user'):
     from googletrans import Translator
@@ -55,10 +55,13 @@ def predict_class(sentence, model):
     # filter out predictions below a threshold
     p = bow(sentence, words,show_details=False)
     res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.6
-    results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
+    print(res)
+    AMBIGOUS_THRESHOLD = 0.0
+    CERTAIN_THRESHOLD = 0.95
+    results = [[i,r] for i,r in enumerate(res) if r>AMBIGOUS_THRESHOLD]
     # sort by strength of probability
     results.sort(key=lambda x: x[1], reverse=True)
+    # print(results)
     return_list = []
     for r in results:
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})

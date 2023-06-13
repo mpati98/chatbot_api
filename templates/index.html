@@ -139,10 +139,10 @@
             })
               .then((r) => r.json())
               .then((r) => {
-                console.log(r.audio);
+                // console.log(r.audio);
                 let msg = { name: "Sam", message: r.res_text };
                 let audio_tag = r.res_audio;
-                var audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=fa4ad8a6-4c9b-47a5-8c0f-d096921fd76b");
+                var audio = new Audio("https://storage.cloud.google.com/audio-files000/"+ audio_tag + ".mp3");
                 audio.play();
                 this.message.push(msg);
                 this.updateChatText(chatbox);
@@ -175,9 +175,9 @@
             .then((r) => r.json())
             .then((r) => {
               let msg2 = { name: "Sam", message: r.res_text };
-              let audio_tag = r.res_audio;
-              var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10/"+ audio_tag + ".mp3");
-              audio.play();
+              // let audio_tag = r.res_audio;
+              // var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10/"+ audio_tag + ".mp3");
+              // audio.play();
               this.message.push(msg2);
               this.updateChatText(chatbox);
               textField.value = "";
@@ -216,6 +216,7 @@
             };
             recognition.onspeechend = function () {
               recognition.stop();
+              // this.recordS = true
             };
             this.recordS = true;
           } else {
@@ -238,7 +239,7 @@
               .then((r) => {
                 let msg3 = { name: "Sam", message: r.res_text };
                 let audio_tag = r.res_audio;
-                var audio = new Audio("https://storage.cloud.google.com/voicebot-bucket/chatbot_api/data/audio/audioMay10/"+ audio_tag + ".mp3");
+                var audio = new Audio("https://storage.cloud.google.com/audio-files000/"+ audio_tag + ".mp3");
                 audio.play();
                 this.message.push(msg3);
                 this.updateChatText(chatbox);

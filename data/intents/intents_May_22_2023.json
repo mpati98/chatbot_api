@@ -19,7 +19,8 @@
         "patterns": [
           "Please list some typical activities",
           "Please recommend some activities",
-          "What are the club's recent activities?"
+          "What are the club's recent activities?",
+          "What has the Social Work Department done?"
         ],
         "responses": [
           "Những hoạt động ý nghĩ mà hội đã thực hiện trong thời gian gần đây là: trao tặng 7 căn nhà tình thương tại xã Trà Tây, huyện Trà Bồng, tỉnh Quảng Ngãi, hỗ trợ thuốc cho F0 tại nhà, dự án Việc làm trao tay đánh bay COVID-19, ..."
@@ -29,7 +30,8 @@
         "tag": "SW_next_event",
         "patterns": [
           "What is the club going to do next?",
-          "What club's upcoming activity?"
+          "What club's upcoming activity?",
+          "Any club activities coming up?"
         ],
         "responses": [
           "Sắp tới hội sẽ tổ chức sự kiện Họp mặt đầu xuân nhằm tạo điều kiện để Quý anh chị doanh nhân có dịp Giao lưu - Kết nối - Thắt chặt tình đoàn kết với nhau, cũng như là dịp để Ban điều hành Ban Công tác xã hội chia sẻ kế hoạch và chương trình hành động của năm 2023"
@@ -52,7 +54,8 @@
           "Anything to note?",
           "What should I pay attention to when participating?",
           "Is there a fee to join?",
-          "Does the activity have a fee?"
+          "Does the activity have a fee?",
+          "How much does it cost to join?"
         ],
         "responses": [
           "Bạn cần đóng phí chia sẻ với 600.000đ/người."
@@ -106,7 +109,9 @@
         "tag": "CLB_Mission",
         "patterns": [
           "What is the club's mission statement?",
-          "What principles does the club operate on?"
+          "What principles does the club operate on?",
+          "How does the Social Work Department operate?",
+          "What principles does the Social Work Department operate on?"
         ],
         "responses": [
           "Câu lạc bộ hoạt động theo tôn chỉ: 1. Thượng tôn pháp luật. 2. Tôn trọng ý kiến tập thể. 3. Trung thực & minh bạch rõ ràng. 4. Hiệu quả & kịp thời. 5. Hợp tác & vươn xa. 6. Thân thiện & bác ái."
@@ -116,7 +121,10 @@
         "tag": "CLB_Recruit",
         "patterns": [
           "Who is allowed to join the club?",
-          "How does the club recruit members?"
+          "How does the club recruit members?",
+          "What are the criteria for recruiting members of the association?",
+          "According to what criteria does the Social Work Board recruit members?",
+          "Does the Social Work Committee recruit members?"
         ],
         "responses": [
           "Câu lạc bộ tuyển thành viên theo những tiêu chí: 1. Những doanh nhân chủ doanh nghiệp các công ty đang hoạt động hợp pháp tại VN. 2. Là hội viên chính thức của CLB Doanh nhân Sài Gòn (có đóng phí thường niên theo quy định) 3. Yêu thích công tác thiện nguyện và các công tác cộng đồng khác. 4. Tôn trọng tôn chỉ hoạt động & quy định của Ban Công tác xã hội Doanh nhân Sài Gòn. 5. Cam kết không bàn luận các chủ đề liên quan đến tôn giáo, chính trị."
@@ -167,7 +175,8 @@
         "tag": "CLB_communityDevelopmentTeam",
         "patterns": [
           "What is social work with a community development team?",
-          "What is a Community Development Team?"
+          "What is a Community Development Team?",
+          "What is a group of managed theoretical methods of social work and research in social work?"
         ],
         "responses": [
           "Nhóm phát triển cộng đồng là những nhóm  hoạt động phi lợi nhuận, với tinh thần thiện nguyện hướng tới cung cấp các dịch vụ theo một quy trình chuyên môn chuyên nghiệp, mang lại hiệu quả cụ thể và lâu dài. Cam kết đồng hành với các cá nhân, gia đình và cộng đồng cùng hành động vượt qua những khó khăn, thách thức ở hiện tại nhằm hướng tới một cuộc sống khỏe mạnh, hạnh phúc và bình an."
