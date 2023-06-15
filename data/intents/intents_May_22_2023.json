@@ -8,10 +8,12 @@
           "What does the Social Work Department do?",
           "What social work clubs?",
           "Social activities organized by the club",
-          "What does the club's social activities include?"
+          "What does the club's social activities include?",
+          "About the Social Work Department"
         ],
         "responses": [
-          "Câu lạc bộ đã tổ chức nhiều hoạt động thiện nguyện trên hầu khắp các lĩnh vực như hỗ trợ đồng bào miền Trung, tiếp sức cán bộ y tế chống dịch Covid, hỗ trợ việc làm, cấp học bổng cho học sinh nghèo vượt khó, … "
+          "Câu lạc bộ đã tổ chức nhiều hoạt động thiện nguyện trên hầu khắp các lĩnh vực như hỗ trợ đồng bào miền Trung, tiếp sức cán bộ y tế chống dịch Covid, hỗ trợ việc làm, cấp học bổng cho học sinh nghèo vượt khó, … ",
+          "4c1f7f2c-6ac6-4a0f-aa45-f9179d3bcae4"
         ]
       },
       {
@@ -20,10 +22,12 @@
           "Please list some typical activities",
           "Please recommend some activities",
           "What are the club's recent activities?",
-          "What has the Social Work Department done?"
+          "What has the Social Work Department done?",
+          "activities carried out by the social work department"
         ],
         "responses": [
-          "Những hoạt động ý nghĩ mà hội đã thực hiện trong thời gian gần đây là: trao tặng 7 căn nhà tình thương tại xã Trà Tây, huyện Trà Bồng, tỉnh Quảng Ngãi, hỗ trợ thuốc cho F0 tại nhà, dự án Việc làm trao tay đánh bay COVID-19, ..."
+          "Những hoạt động ý nghĩa mà hội đã thực hiện trong thời gian gần đây là: trao tặng 7 căn nhà tình thương tại xã Trà Tây, huyện Trà Bồng, tỉnh Quảng Ngãi, hỗ trợ thuốc cho F0 tại nhà, dự án Việc làm trao tay đánh bay COVID-19, ...",
+          "f2275ffa-57c0-43d8-a00d-63401d8a526a"
         ]
       },
       {
@@ -31,10 +35,12 @@
         "patterns": [
           "What is the club going to do next?",
           "What club's upcoming activity?",
-          "Any club activities coming up?"
+          "Any club activities coming up?",
+          "what about next?"
         ],
         "responses": [
-          "Sắp tới hội sẽ tổ chức sự kiện Họp mặt đầu xuân nhằm tạo điều kiện để Quý anh chị doanh nhân có dịp Giao lưu - Kết nối - Thắt chặt tình đoàn kết với nhau, cũng như là dịp để Ban điều hành Ban Công tác xã hội chia sẻ kế hoạch và chương trình hành động của năm 2023"
+          "Sắp tới hội sẽ tổ chức sự kiện Họp mặt đầu xuân nhằm tạo điều kiện để Quý anh chị doanh nhân có dịp Giao lưu - Kết nối - Thắt chặt tình đoàn kết với nhau, cũng như là dịp để Ban điều hành Ban Công tác xã hội chia sẻ kế hoạch và chương trình hành động của năm 2023",
+          "43ee3e72-41be-4b48-98b5-a943026b1ae2"
         ]
       },
       {
@@ -45,7 +51,8 @@
           "When does this event take place?"
         ],
         "responses": [
-          "Sự kiện sẽ diễn ra tại Nhà hàng PHỐ 79, Số 5 Phạm Ngọc Thạch, P. Võ Thị Sáu, Quận 3, TP. HCM lúc 17g00 ngày 24/02/2023"
+          "Sự kiện sẽ diễn ra tại Nhà hàng PHỐ 79, Số 5 Phạm Ngọc Thạch, P. Võ Thị Sáu, Quận 3, TP. HCM lúc 17g00 ngày 24/02/2023",
+          "4ac11d5d-8e1b-49e1-8e5c-32a943be680e"
         ]
       },
       {
@@ -55,10 +62,13 @@
           "What should I pay attention to when participating?",
           "Is there a fee to join?",
           "Does the activity have a fee?",
-          "How much does it cost to join?"
+          "How much does it cost to join?",
+          "How much is the registration fee?",
+          "how much is the joining fee?"
         ],
         "responses": [
-          "Bạn cần đóng phí chia sẻ với 600.000đ/người."
+          "Bạn cần đóng phí chia sẻ với 600.000đ/người.",
+          "de375488-8e4e-4ab6-9abd-4ee872e81ece"
         ]
       },
       {
@@ -70,7 +80,8 @@
           "How to join?"
         ],
         "responses": [
-          "Để đăng ký tham dự, bạn vui lòng liên hệ số điện thoại: 0913 733 557 gặp Anh Hồ - Phó Ban CTXH hoặc 0353712456 gặp Anh Cường - Thư ký Ban CTXH"
+          "Để đăng ký tham dự, bạn vui lòng liên hệ số điện thoại: 0913 733 557 gặp Anh Hồ - Phó Ban CTXH hoặc 0353712456 gặp Anh Cường - Thư ký Ban CTXH",
+          "ec4c8170-8c84-4915-ba06-dddf4737ce25"
         ]
       },
       {
@@ -78,31 +89,12 @@
         "patterns": [
           "Give me transfer information",
           "What is the content of the transfer?",
-          "Where can I pay the fee?"
+          "Where can I pay the fee?",
+          "where to pay"
         ],
         "responses": [
-          "Thông tin tài khoản: 0371003698437 (Ngân hàng Vietcombank) Chủ tài khoản: Trịnh Thị Xuân Diệu, Nội dung: Tên + Phi chia se chuong trinh hop mat dau xuan"
-        ]
-      },
-      {
-        "tag": "Voicebot_Intro",
-        "patterns": [
-          "Let's introduce Voicebot.",
-          "What is Voicebot?",
-          "Let's introduce yourself"
-        ],
-        "responses": [
-          "Voicebot là sản phẩm mới nhất của CBD Robotics, đóng vai trò như một thư ký ảo trong doanh nghiệp. Voicebot được phát triển nhằm trả lời tự động các thông tin về doanh nghiệp được triển khai, hỗ trợ các chiến dịch marketing một cách hiệu quả."
-        ]
-      },
-      {
-        "tag": "CBD_Robot_Intro",
-        "patterns": [
-          "Let's introduce the company CBD Robotics",
-          "Tell me about the company CBD Robotics."
-        ],
-        "responses": [
-          "CBD Robotics được thành lập bởi một nhóm chuyên gia người Mỹ gốc Việt và người Mỹ. Công ty chuyên nghiên cứu và phát triển các sản phẩm và dịch vụ liên quan đến dữ liệu lớn và trí tuệ nhân tạo. Các sản phẩm của công ty thuộc nhiều lĩnh vực như: Robot kết toán, Xe bay, Dự đoán mức tiêu thụ của người tiêu dùng trong marketing, Dự đoán bệnh ung thư phổi"
+          "Thông tin tài khoản: 0371003698437 (Ngân hàng Vietcombank) Chủ tài khoản: Trịnh Thị Xuân Diệu, Nội dung: Tên + Phi chia se chuong trinh hop mat dau xuan",
+          "2af2182e-16f1-4086-a4a9-066a153ff704"
         ]
       },
       {
@@ -111,7 +103,8 @@
           "What is the club's mission statement?",
           "What principles does the club operate on?",
           "How does the Social Work Department operate?",
-          "What principles does the Social Work Department operate on?"
+          "What principles does the Social Work Department operate on?",
+          "club rules"
         ],
         "responses": [
           "Câu lạc bộ hoạt động theo tôn chỉ: 1. Thượng tôn pháp luật. 2. Tôn trọng ý kiến tập thể. 3. Trung thực & minh bạch rõ ràng. 4. Hiệu quả & kịp thời. 5. Hợp tác & vươn xa. 6. Thân thiện & bác ái."
@@ -260,17 +253,20 @@
           "For more information on the upcoming Caravan show"
         ],
         "responses": [
-          "Hành khúc Doanh nhân Sài Gòn 2023 sẽ trải nghiệm vào sáng 21.7.2023 để đến xã Cam Thịnh Tây trao 4 căn nhà cho bà con và men theo cung đường biển Ninh Chữ ( có sân golf Nara Bình Tiên nice view và Resort Amanoi 6 sao, đẳng cấp quốc tế)  về Ninh Hải trao 2 phòng máy đa phương tiện cho 2 trường học. Bạn có muốn tham gia không?"
+          "Hành khúc Doanh nhân Sài Gòn 2023 sẽ trải nghiệm vào sáng 21.7.2023 để đến xã Cam Thịnh Tây trao 4 căn nhà cho bà con và men theo cung đường biển Ninh Chữ ( có sân golf Nara Bình Tiên nice view và Resort Amanoi 6 sao, đẳng cấp quốc tế)  về Ninh Hải trao 2 phòng máy đa phương tiện cho 2 trường học. Bạn có muốn tham gia không?",
+          "a02dba02-9e65-47a6-b862-928082435bb0"
         ]
       },
       {
         "tag": "caravanJoin",
         "patterns": [
           "Okay, how to join?",
-          "How to join the Saigon Entrepreneurs March 2023"
+          "How to join the Saigon Entrepreneurs March 2023",
+          "How can i join it"
         ],
         "responses": [
-          "Để đăng ký tham dự, bạn vui lòng liên hệ số điện thoại: 0913 733 557 gặp Anh Hồ - Phó Ban CTXH hoặc 0353712456 gặp Anh Cường - Thư ký Ban CTXH."
+          "Để đăng ký tham dự, bạn vui lòng liên hệ số điện thoại: 0913 733 557 gặp Anh Hồ - Phó Ban CTXH hoặc 0353712456 gặp Anh Cường - Thư ký Ban CTXH.",
+          "2871d42f-0798-4fca-b4cd-82dc1540a736"
         ]
       }
     ]

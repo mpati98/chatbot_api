@@ -70,6 +70,14 @@ body {
     outline: none;
     cursor: pointer;
 }
+.voice__button__active{
+    font-size: 1.8em;
+    margin-right: 5px;
+    background: red;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
 /* HEADER */
 .chatbox__header {
