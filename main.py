@@ -89,9 +89,18 @@ def chat_rulebased_01(msg):
     if "nguyên tắc hoạt động" in msg.lower() or "tôn chỉ hoạt động" in msg.lower():
         res = ["Câu lạc bộ hoạt động theo tôn chỉ: 1. Thượng tôn pháp luật. 2. Tôn trọng ý kiến tập thể. 3. Trung thực & minh bạch rõ ràng. 4. Hiệu quả & kịp thời. 5. Hợp tác & vươn xa. 6. Thân thiện & bác ái.", "4c265861-cbd7-4863-8300-e0237c41e5b0"]
         tag = "CLB_Mission"
-    if "thành viên" in msg.lower():
+    elif "thành viên" in msg.lower():
         res = ["Câu lạc bộ tuyển thành viên theo những tiêu chí: 1. Những doanh nhân chủ doanh nghiệp các công ty đang hoạt động hợp pháp tại VN. 2. Là hội viên chính thức của CLB Doanh nhân Sài Gòn (có đóng phí thường niên theo quy định) 3. Yêu thích công tác thiện nguyện và các công tác cộng đồng khác. 4. Tôn trọng tôn chỉ hoạt động & quy định của Ban Công tác xã hội Doanh nhân Sài Gòn. 5. Cam kết không bàn luận các chủ đề liên quan đến tôn giáo, chính trị.", "f0890010-1a9c-4896-87a3-f0108087c6e9"]
-        tag = "CLB_Recruit"        
+        tag = "CLB_Recruit" 
+    elif "đã thực hiện" in msg.lower():
+        res = ["Những hoạt động ý nghĩa mà hội đã thực hiện trong thời gian gần đây là: trao tặng 7 căn nhà tình thương tại xã Trà Tây, huyện Trà Bồng, tỉnh Quảng Ngãi, hỗ trợ thuốc cho F0 tại nhà, dự án Việc làm trao tay đánh bay COVID-19, ...", "f2275ffa-57c0-43d8-a00d-63401d8a526a"]
+        tag = "SW_activities" 
+    elif "sẽ thực hiện" in msg.lower():
+        res = ["Sắp tới hội sẽ tổ chức sự kiện Họp mặt đầu xuân nhằm tạo điều kiện để Quý anh chị doanh nhân có dịp Giao lưu - Kết nối - Thắt chặt tình đoàn kết với nhau, cũng như là dịp để Ban điều hành Ban Công tác xã hội chia sẻ kế hoạch và chương trình hành động của năm 2023", "43ee3e72-41be-4b48-98b5-a943026b1ae2"]
+        tag = "SW_next_event" 
+    else:
+        res = ["Câu lạc bộ đã tổ chức nhiều hoạt động thiện nguyện trên hầu khắp các lĩnh vực như hỗ trợ đồng bào miền Trung, tiếp sức cán bộ y tế chống dịch Covid, hỗ trợ việc làm, cấp học bổng cho học sinh nghèo vượt khó, … ", "4c1f7f2c-6ac6-4a0f-aa45-f9179d3bcae4"]
+        tag = "Introduce" 
     return res, tag
 def chat_rulebased_02(msg):
     ### Function
