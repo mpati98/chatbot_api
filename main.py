@@ -174,23 +174,32 @@ class Chatbot(Resource):
 
     def post(self):
         text_input = request.get_json().get("message")
-        if "ban công tác xã hội" in text_input.lower():
-            resp, tag = chat_rulebased_01(text_input)
-        elif "công tác xã hội" in text_input.lower():
-            resp, tag = chat_rulebased_02(text_input)
-        else:
-            text_input = transText(text_input)
-            try:
-                resp, tag = chatbot_response(text_input)
-            except:
-                resp = ["Tín hiệu không ổn định, vui lòng lặp lại rõ hơn nhé", "fbad6e35-3933-4388-be7b-d6dda276e114"]
-                tag = "Error"
-            print(resp)
-        output = {
-            "res_text": resp[0],
-            "audio_token": resp[1],
-            "res_audio": tag
-        }
+        try:
+            if "ban công tác xã hội" in text_input.lower():
+                resp, tag = chat_rulebased_01(text_input)
+            elif "công tác xã hội" in text_input.lower():
+                resp, tag = chat_rulebased_02(text_input)
+            else:
+                text_input = transText(text_input)
+                try:
+                    resp, tag = chatbot_response(text_input)
+                except:
+                    resp = ["Tín hiệu không ổn định, vui lòng lặp lại rõ hơn nhé", "fbad6e35-3933-4388-be7b-d6dda276e114"]
+                    tag = "Error"
+                print(resp)
+            output = {
+                "res_text": resp[0],
+                "audio_token": resp[1],
+                "res_audio": tag
+            }
+        except:
+            resp = ["Tín hiệu không ổn định, vui lòng lặp lại rõ hơn nhé", "fbad6e35-3933-4388-be7b-d6dda276e114"]
+            tag = "Error"
+            output = {
+                "res_text": resp[0],
+                "audio_token": resp[1],
+                "res_audio": tag
+            }
         return jsonify(output)
 
 api.add_resource(Chatbot, '/response')
