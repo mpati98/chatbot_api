@@ -216,11 +216,11 @@
             });
         }
         onVoiceButton(chatbox) {
-          var SpeechRecognition = webkitSpeechRecognition;
-          var recognition = new SpeechRecognition();
+          // var SpeechRecognition = webkitSpeechRecognition;
+          let recognition = new webkitSpeechRecognition();
           recognition.lang = "vi-VN";
-          recognition.interimResults = false;
-          recognition.continuous = false;
+          recognition.interimResults = true;
+          recognition.continuous = true;
           var content;
           recognition.start();
           recognition.onresult = function (event) {
