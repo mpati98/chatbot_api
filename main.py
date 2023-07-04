@@ -200,6 +200,7 @@ class Chatbot(Resource):
                 "audio_token": resp[1],
                 "res_audio": tag
             }
+        print(output)
         return jsonify(output)
 
 api.add_resource(Chatbot, '/response')
