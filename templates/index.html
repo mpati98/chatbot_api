@@ -222,6 +222,8 @@
           recognition.interimResults = true;
           recognition.continuous = true;
           var content;
+          var audio_tag;
+          var audio_token;
           recognition.start();
           recognition.onresult = function (event) {
             var lastResult = event.results.length - 1;
@@ -249,9 +251,10 @@
               .then((r) => r.json())
               .then((r) => {
                 let msg3 = { name: "Sam", message: r.res_text };
-                let audio_tag = r.res_audio;
-                let audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=a02dba02-9e65-47a6-b862-928082435bb0");
-                audio.play();
+                var audio_tag = r.res_audio;
+                var audio_token = r.audio_token;
+                // let audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=a02dba02-9e65-47a6-b862-928082435bb0");
+                // audio.play();
                 this.message.push(msg3);
                 this.updateChatText(chatbox);
               })
@@ -261,8 +264,11 @@
               });
               content = "";
             }, 5100);
-          let audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ "caravan2023" + ".mp3?alt=media&token=a02dba02-9e65-47a6-b862-928082435bb0");
-          audio.play();
+          if (audio_tag){
+            let audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=" + audio_token);
+            audio.play();
+
+          }
         }
         updateChatText(chatbox) {
           var html = "";
