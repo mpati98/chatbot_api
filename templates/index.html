@@ -264,11 +264,11 @@
               });
               content = "";
             }, 5100);
-          if (audio_tag){
+          setTimeout(() => {
             let audio = new Audio("https://firebasestorage.googleapis.com/v0/b/arti-web-daae5.appspot.com/o/"+ audio_tag + ".mp3?alt=media&token=" + audio_token);
             audio.play();
 
-          }
+          }, 6000);
         }
         updateChatText(chatbox) {
           var html = "";
